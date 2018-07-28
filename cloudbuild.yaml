@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/crichmond-pocs/calculator-gcp:$REVISION_ID', '.']
+images: [gcr.io/crichmond-pocs/calculator-gcp:$REVISION_ID]
