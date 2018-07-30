@@ -10,28 +10,28 @@ app.get("/add", (req, res) => {
 	var a = parseFloat(req.query.a);
 	var b = parseFloat(req.query.b);
 	
-	res.send(add(a, b));
+	res.json(add(a, b));
 });
 
 app.get("/divide", (req, res) => {
 	const a = parseFloat(req.query.a);
 	const b = parseFloat(req.query.b);
 	
-	res.send(divide(a, b));
+	res.json(divide(a, b));
 });
 
 app.get("/multiply", (req, res) => {
 	const a = parseFloat(req.query.a);
 	const b = parseFloat(req.query.b);
 	
-	res.send(multiply(a, b));
+	res.json(multiply(a, b));
 });
 
 app.get("/subtract", (req, res) => {
 	const a = parseFloat(req.query.a);
 	const b = parseFloat(req.query.b);
 	
-	res.send(subtract(a, b));
+	res.json(subtract(a, b));
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
