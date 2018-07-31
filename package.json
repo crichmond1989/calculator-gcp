@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "jest": {
-    "coverageReporters": ["cobertura"],
+    "coverageReporters": [
+      "html",
+      "cobertura"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "testEnvironment": "node"
+  },
+  "jest-junit": {
+    "output": "test-result.xml"
   },
   "scripts": {
     "start": "node index.js",
-    "test:unit": "jest --coverage --json | jest-json-to-tap | tap-xunit > test-result.xml"
+    "test:unit": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,7 +36,6 @@
   },
   "devDependencies": {
     "jest": "^23.4.2",
-    "jest-json-to-tap": "^2.1.0",
-    "tap-xunit": "^2.3.0"
+    "jest-junit": "^5.1.0"
   }
 }
