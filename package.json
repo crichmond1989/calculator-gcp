@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "jest": {
+    "coverageReporters": ["cobertura"],
     "testEnvironment": "node"
   },
   "scripts": {
